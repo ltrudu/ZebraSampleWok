@@ -3,22 +3,22 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ZebraSampleWok.iml" filepath="$PROJECT_DIR$/ZebraSampleWok.iml" />
-      <module fileurl="file://$PROJECT_DIR$/allsampleapp/allsampleapp.iml" filepath="$PROJECT_DIR$/allsampleapp/allsampleapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_zebrasampleswok/_zebrasampleswok.iml" filepath="$PROJECT_DIR$/_zebrasampleswok/_zebrasampleswok.iml" />
       <module fileurl="file://$PROJECT_DIR$/barcodesampleapp/barcodesampleapp.iml" filepath="$PROJECT_DIR$/barcodesampleapp/barcodesampleapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/basickiosksampleapp/basickiosksampleapp.iml" filepath="$PROJECT_DIR$/basickiosksampleapp/basickiosksampleapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/batteryinfosampleapp/batteryinfosampleapp.iml" filepath="$PROJECT_DIR$/batteryinfosampleapp/batteryinfosampleapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/cellularenabledisableapp/cellularenabledisableapp.iml" filepath="$PROJECT_DIR$/cellularenabledisableapp/cellularenabledisableapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/datawedgedatacaptureapp/datawedgedatacaptureapp.iml" filepath="$PROJECT_DIR$/datawedgedatacaptureapp/datawedgedatacaptureapp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/linkosbtconnectivitydemo/linkosbtconnectivitydemo.iml" filepath="$PROJECT_DIR$/linkosbtconnectivitydemo/linkosbtconnectivitydemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/linkosbtdefaultprinterdemo/linkosbtdefaultprinterdemo.iml" filepath="$PROJECT_DIR$/linkosbtdefaultprinterdemo/linkosbtdefaultprinterdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/linkosbtconnectivitydemoapp/linkosbtconnectivitydemoapp.iml" filepath="$PROJECT_DIR$/linkosbtconnectivitydemoapp/linkosbtconnectivitydemoapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/linkosbtdefaultprinterdemoapp/linkosbtdefaultprinterdemoapp.iml" filepath="$PROJECT_DIR$/linkosbtdefaultprinterdemoapp/linkosbtdefaultprinterdemoapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/linkosbtdetermineprinterlanguage/linkosbtdetermineprinterlanguage.iml" filepath="$PROJECT_DIR$/linkosbtdetermineprinterlanguage/linkosbtdetermineprinterlanguage.iml" />
-      <module fileurl="file://$PROJECT_DIR$/linkosbtdetermineprinterlanguage/linkosbtdetermineprinterlanguage.iml" filepath="$PROJECT_DIR$/linkosbtdetermineprinterlanguage/linkosbtdetermineprinterlanguage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/linkosbtdetermineprinterlanguageapp/linkosbtdetermineprinterlanguageapp.iml" filepath="$PROJECT_DIR$/linkosbtdetermineprinterlanguageapp/linkosbtdetermineprinterlanguageapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/linkosbtledemoscombinedapp/linkosbtledemoscombinedapp.iml" filepath="$PROJECT_DIR$/linkosbtledemoscombinedapp/linkosbtledemoscombinedapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/linkosbtlistformatsdemoapp/linkosbtlistformatsdemoapp.iml" filepath="$PROJECT_DIR$/linkosbtlistformatsdemoapp/linkosbtlistformatsdemoapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/linkosbtpdfprintapp/linkosbtpdfprintapp.iml" filepath="$PROJECT_DIR$/linkosbtpdfprintapp/linkosbtpdfprintapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/linkosbtprintrotatedimageapp/linkosbtprintrotatedimageapp.iml" filepath="$PROJECT_DIR$/linkosbtprintrotatedimageapp/linkosbtprintrotatedimageapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/linkosbtprintstationapp/linkosbtprintstationapp.iml" filepath="$PROJECT_DIR$/linkosbtprintstationapp/linkosbtprintstationapp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/linkosbtsendfile/linkosbtsendfile.iml" filepath="$PROJECT_DIR$/linkosbtsendfile/linkosbtsendfile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/linkosbtsendfileapp/linkosbtsendfileapp.iml" filepath="$PROJECT_DIR$/linkosbtsendfileapp/linkosbtsendfileapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/lockpinenablerapp/lockpinenablerapp.iml" filepath="$PROJECT_DIR$/lockpinenablerapp/lockpinenablerapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/notificationsampleapp/notificationsampleapp.iml" filepath="$PROJECT_DIR$/notificationsampleapp/notificationsampleapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/personnalshoppersampleapp/personnalshoppersampleapp.iml" filepath="$PROJECT_DIR$/personnalshoppersampleapp/personnalshoppersampleapp.iml" />
