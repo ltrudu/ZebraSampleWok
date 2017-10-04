@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><!--This is an auto generated document. Changes to this document may cause incorrect behavior.--><wap-provisioningdoc>
+  <characteristic type="ProfileInfo">
+    <parm name="created_wizard_version" value="6.3.0"/>
+  </characteristic>
+  <characteristic type="Profile">
+    <parm name="ProfileName" value="EthernetMgrProfile-1"/>
+    <parm name="ModifiedDate" value="2017-03-14 13:24:54"/>
+    <parm name="TargetSystemVersion" value="6.2"/>
+    <characteristic type="EthernetMgr" version="6.2">
+      <parm name="emdk_name" value="Ethernet"/>
+      <parm name="EthernetState" value="1" />
+      <parm name="SetEthernetProxySettings" value="2" />
+      <characteristic type="proxy-details">
+        <parm name="ProxyHostName" value="proxy.it-local" />
+        <parm name="ProxyPort" value="3128" />
+        <parm name="BypassProxy" value="*.it-local" />
+      </characteristic>
+      <parm name="ConfigIpAddr" value="1" />
+      <parm name="UseDHCP" value="0" />
+      <characteristic type="ip-details">
+        <parm name="IpAddress" value="172.20.0.201" />
+        <parm name="Gateway" value="172.20.0.1" />
+        <parm name="NetMask" value="255.255.0.0" />
+        <parm name="DNS1" value="172.20.0.1" />
+      </characteristic>
+    </characteristic>
+  </characteristic>
+
+</wap-provisioningdoc>

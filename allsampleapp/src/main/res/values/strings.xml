@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">ZebraSamples</string>
+    <string name="title_activity_ordered_sample_list">OrderedSampleListActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="activity_name_barcodesample1">Barcode Sample</string>
+    <string name="activity_name_notificationsample1">Notification Sample</string>
+    <string name="activity_name_profileappmgrsample1">Profile Application Mgr</string>
+    <string name="activity_name_profileclocksample1">Profile Clock</string>
+    <string name="activity_name_profiledatacapturesample1">Profile Data Capture</string>
+    <string name="activity_name_profilegprsmgrsample1">Profile GPRS</string>
+    <string name="activity_name_profilepowermgrsample1">Profile Power</string>
+    <string name="activity_name_profilewifisample1">Profile Wifi</string>
+    <string name="activity_name_profilewirelessmgrsample1">Profile Wireless</string>
+    <string name="activity_name_componentmanagersample">Profile Component</string>
+    <string name="activity_name_ethernetmanagersample">Profile Ethernet</string>
+    <string name="activity_name_simulscansample1">Simulscan</string>
+    <string name="activity_name_scanandpairsample1">Scan and Pair</string>
+    <string name="activity_name_securenfcsample1">Secure NFC</string>
+    <string name="activity_name_datacapturereceiver">Datawedge API</string>
+    <string name="activity_name_batteryinfosample">Battery info</string>
+    <string name="activity_name_terminalinfo">Terminal info</string>
+    <string name="activity_name_lockpinenabler">Lock Pin</string>
+    <string name="activity_name_basickiosk">Basic Kiosk / Device Admin</string>
+    <string name="activity_name_cellulardataenabledisable">Cellular Enable/Disable</string>
+    <string name="activity_name_serialcommsample1">Serial Communications</string>
+    <string name="activity_name_udisample1">UDI</string>
+    <string name="activity_name_personalshoppersample1">Personnal Shopper</string>
+
+    <string name="activity_name_connectivitydemo">LinkOS BT Connectivity</string>
+    <string name="activity_name_defaultprinterdemo">LinkOS BT Default Printer</string>
+    <string name="activity_name_determineprinterlanguage">LinkOS BT Determine Printer Language and Status</string>
+    <string name="activity_name_listformatsdemo">LinkOS BT List Formats</string>
+    <string name="activity_name_pdfprint">LinkOS BT PDF Print</string>
+    <string name="activity_name_printrotatedimage">LinkOS BT Print Rotated Image</string>
+    <string name="activity_name_sendfiledemo">LinkOS BT SendFile</string>
+
+    <string name="activity_name_bluetoothlediscovery">LinkOS BTLE Discovered Printers</string>
+    <string name="activity_name_imageprintdemo">LinkOS BTLE Image Print</string>
+    <string name="activity_name_printstatusdemo">LinkOS BTLE Printer Status</string>
+    <string name="activity_name_btlesendfiledemo">LinkOS BTLE Send File</string>
+    <string name="activity_name_storedformatscreen">LinkOS BTLE Stored Format</string>
+    <string name="activity_name_btleconnectivitydemo">LinkOS BTLE Connectivity</string>
+    <string name="activity_name_printerstatusscreen">LinkOS BTLE Status Messages</string>
+    <string name="activity_name_listformatsscreen">LinkOS BTLE List Formats</string>
+    <string name="activity_name_statuschanneldemo">LinkOS BTLE Status Channel</string>
+    <string name="activity_name_statuschannelscreen">LinkOS BTLE Status Channel View</string>
+    <string name="activity_name_multichanneldemo">LinkOS BTLE Multi Channel</string>
+    <string name="activity_name_multichannelscreen">LinkOS BTLE Multi Channel View</string>
+    <string name="activity_name_receiptdemo">LinkOS BTLE Receipt</string>
+
+
+</resources>

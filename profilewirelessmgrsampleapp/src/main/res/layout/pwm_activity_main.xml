@@ -1,0 +1,301 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.symbol.profilewirelessmgrsample1.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/rl_config"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/transparent" />
+
+            <TextView
+                android:id="@+id/tvbtenabledisable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@id/divider"
+                android:text="Bluetooth:" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupBT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tvbtenabledisable"
+                android:layout_below="@+id/tvbtenabledisable"
+                android:layout_marginLeft="16dp">
+
+                <RadioButton
+                    android:id="@+id/radioBTDNC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Do Not Change" />
+
+                <RadioButton
+                    android:id="@+id/radioBTEnable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Enable" />
+
+                <RadioButton
+                    android:id="@+id/radioBTDisable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Disable" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvbtstate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/divider"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:text="Bluetooth State:" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupBTState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/tvbtstate"
+                android:layout_below="@+id/tvbtstate"
+                android:layout_marginLeft="16dp">
+
+                <RadioButton
+                    android:id="@+id/radioBTStateDNC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Do Not Change" />
+
+                <RadioButton
+                    android:id="@+id/radioBTStateEnable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Turn On" />
+
+                <RadioButton
+                    android:id="@+id/radioBTStateDisable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Turn Off" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/gpsstate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroupBTState"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@id/divider"
+                android:text="GPS State:"
+                android:layout_marginTop="15dp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupGPSState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/gpsstate"
+                android:layout_below="@+id/gpsstate"
+                android:layout_marginLeft="16dp">
+
+                <RadioButton
+                    android:id="@+id/radioGPSStateDNC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Do Not Change" />
+
+                <RadioButton
+                    android:id="@+id/radioGPSStateEnable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Turn On" />
+
+                <RadioButton
+                    android:id="@+id/radioGPSStateDisable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Turn Off" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/gpsmode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroupBTState"
+                android:layout_toRightOf="@id/divider"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:text="GPS Location Mode:"
+                android:layout_marginTop="15dp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupGPSMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/gpsmode"
+                android:layout_below="@+id/gpsmode"
+                android:layout_marginLeft="16dp">
+
+                <RadioButton
+                    android:id="@+id/radioGPSModeDNC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Do Not Change" />
+
+                <RadioButton
+                    android:id="@+id/radioGPSModeHA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="High accuracy" />
+
+                <RadioButton
+                    android:id="@+id/radioGPSModeBS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Battery Saving" />
+
+
+                <RadioButton
+                    android:id="@+id/radioGPSModeDO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Device only" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/nfcstate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/wwanstate"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/radioGroupGPSState"
+                android:layout_marginTop="15dp"
+                android:layout_toLeftOf="@id/divider"
+                android:text="NFC State:" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupNFCState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/nfcstate"
+                android:layout_below="@+id/nfcstate"
+                android:layout_marginLeft="16dp">
+
+                <RadioButton
+                    android:id="@+id/radioNFCStateDNC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Do Not Change" />
+
+                <RadioButton
+                    android:id="@+id/radioNFCStateEnable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Turn On" />
+
+                <RadioButton
+                    android:id="@+id/radioNFCStateDisable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Turn Off" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/wwanstate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroupGPSMode"
+                android:layout_toRightOf="@id/divider"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:text="WWAN State:" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupWWANState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/wwanstate"
+                android:layout_below="@+id/wwanstate"
+                android:layout_marginLeft="16dp">
+
+                <RadioButton
+                    android:id="@+id/radioWWANStateDNC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Do Not Change" />
+
+                <RadioButton
+                    android:id="@+id/radioWWANStateEnable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Turn On" />
+
+                <RadioButton
+                    android:id="@+id/radioWWANStateDisable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Turn Off" />
+            </RadioGroup>
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/buttonSet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/rl_config"
+            android:text="Set" />
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/buttonSet"
+            android:text="Status:" />
+
+        <TextView
+            android:id="@+id/textViewStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_below="@id/textView2"
+            android:text="TextView" />
+
+    </RelativeLayout>
+</ScrollView>

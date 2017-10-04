@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.symbol.componentmanagersample.MainActivity" >
+
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Ethernet settings:" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupEthernetUsage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="15dp" >
+
+        <RadioButton
+            android:id="@+id/radioEthernetUsageDoNothing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Do Nothing" />
+
+        <RadioButton
+            android:id="@+id/radioEthernetUsageEnable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enable" />
+
+        <RadioButton
+            android:id="@+id/radioEthernetUsageDisable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Disable" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroupEthernetUsage"
+        android:text="Ethernet state:"
+        android:layout_marginTop="20dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupEthernetState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView3"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="15dp" >
+
+        <RadioButton
+            android:id="@+id/radioEthernetStateDoNothing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Do Nothing" />
+
+        <RadioButton
+            android:id="@+id/radioEthernetStateTurnOn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enable" />
+
+        <RadioButton
+            android:id="@+id/radioEthernetStateTurnOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Disable" />
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/buttonSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroupEthernetState"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Set" />
+
+
+    <TextView
+        android:id="@+id/textViewStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView2"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/buttonSet"
+        android:text="Status:" />
+
+</RelativeLayout>

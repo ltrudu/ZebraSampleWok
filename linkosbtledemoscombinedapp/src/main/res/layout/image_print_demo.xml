@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/connection_screen_layout"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:gravity="center_horizontal"
+	android:layout_height="fill_parent">
+
+    <Button
+        android:id="@+id/discoverPrintersButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Discover Printers" />
+
+	<CheckBox
+		android:id="@+id/checkBox"
+		android:text="Check to store on printer"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />
+	<EditText
+		android:id="@+id/printerStorePath"
+		android:layout_height="wrap_content"
+		android:hint="Path to store on printer"
+		android:layout_width="fill_parent"
+		android:inputType="textNoSuggestions|text"
+		android:visibility="invisible" />
+	<ListView
+		android:id="@+id/discoveredPrintersList"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" />
+
+
+</LinearLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LockPinEnabler</string>
+    <string name="sample_device_admin">Lock Pin Enabler</string>
+    <string name="sample_device_admin_description">An app that tries to reset password of lock pin</string>
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:gravity="center_horizontal"
+	android:layout_height="fill_parent">
+
+	<TextView
+		android:id="@+id/statusText"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="Status: Not Connected"
+		android:layout_centerHorizontal="true"
+		android:gravity="center_horizontal"
+		android:background="@color/Red"
+		android:textSize="20.0sp" />
+
+	<Button
+	    android:id="@+id/discoverPrintersButton"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="Discover Printers" />
+
+	<TextView
+	    android:id="@+id/selectPrinterText"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:gravity="center_horizontal"
+	    android:text="Click Printer from list attempt connecting"
+	    android:textSize="20.0sp" />
+	
+	<ListView
+		android:id="@+id/discoveredPrintersList"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" />
+
+</LinearLayout>

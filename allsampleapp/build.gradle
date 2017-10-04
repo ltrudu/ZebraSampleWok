@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        applicationId "com.symbol.emdkallsamples"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+
+    //noinspection AndroidLintGradleCompatible
+    compile 'com.android.support:multidex:1.0.1'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:26.+'
+    testCompile 'junit:junit:4.12'
+    compile project(':barcodesampleapp')
+    compile project(':notificationsampleapp')
+    compile project(':profileappmgrapp')
+    compile project(':profileclocksampleapp')
+    compile project(':profiledatacapturesampleapp')
+    compile project(':profilegprssampleapp')
+    compile project(':profilepowermgrsampleapp')
+    compile project(':profilewifisampleapp')
+    compile project(':profilewirelessmgrsampleapp')
+    compile project(':personnalshoppersampleapp')
+    compile project(':scanandpairsampleapp')
+    compile project(':securenfcsampleapp')
+    compile project(':serialcomsampleapp')
+    compile project(':simulscansampleapp')
+    compile project(':udisampleapp')
+    compile project(':batteryinfosampleapp')
+    compile project(':cellularenabledisableapp')
+    compile project(':profilecomponentmgrsampleapp')
+    compile project(':profileethernetmgrsampleapp')
+    compile project(':lockpinenablerapp')
+    compile project(':terminalinfoapp')
+    compile project(':basickiosksampleapp')
+    compile project(':datawedgedatacaptureapp')
+    compile project(':linkosbtsendfile')
+    compile project(':linkosbtconnectivitydemo')
+    compile project(':linkosbtdefaultprinterdemo')
+    compile project(':linkosbtdetermineprinterlanguage')
+    compile project(':linkosbtlistformatsdemoapp')
+    compile project(':linkosbtpdfprintapp')
+    compile project(':linkosbtprintrotatedimageapp')
+    compile project(':linkosbtledemoscombinedapp')
+    compile project(':linkosbtprintstationapp')
+}

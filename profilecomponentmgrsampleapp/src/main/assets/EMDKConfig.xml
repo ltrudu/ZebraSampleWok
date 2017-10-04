@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><!--This is an auto generated document. Changes to this document may cause incorrect behavior.--><wap-provisioningdoc>
+  <characteristic type="ProfileInfo">
+    <parm name="created_wizard_version" value="5.0.1"/>
+  </characteristic>
+  <characteristic type="Profile">
+    <parm name="ProfileName" value="ComponentMgrProfile-1"/>
+    <parm name="ModifiedDate" value="2017-03-14 12:38:43"/>
+    <parm name="TargetSystemVersion" value="6.0"/>
+  <characteristic type="ComponentMgr" version="4.4">
+      <parm name="emdk_name" value="Component"/>
+      <parm name="EthernetUsage" value="1"/>
+      <parm name="EthernetState" value="2"/>
+    </characteristic>
+  </characteristic>
+</wap-provisioningdoc>

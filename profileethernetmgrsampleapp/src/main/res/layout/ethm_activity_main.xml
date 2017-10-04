@@ -1,0 +1,297 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.symbol.ethernetmanagersample.MainActivity" >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Ethernet state:"
+        android:layout_marginTop="20dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupEthernetState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView3"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="15dp" >
+
+        <RadioButton
+            android:id="@+id/radioEthernetStateDoNothing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Do Nothing" />
+
+        <RadioButton
+            android:id="@+id/radioEthernetStateTurnOn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enable" />
+
+        <RadioButton
+            android:id="@+id/radioEthernetStateTurnOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Disable" />
+    </RadioGroup>
+
+    <CheckBox
+        android:text="Config Ip address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:id="@+id/checkBoxConfigIpAddress"
+        android:layout_below="@+id/radioGroupEthernetState"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:text="Use DHCP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:id="@+id/checkBoxUseDHCP"
+        android:layout_below="@+id/checkBoxConfigIpAddress"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ip address:"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/checkBoxUseDHCP"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:text="172.20.0.201"
+        android:ems="10"
+        android:id="@+id/editTextIpAddress"
+        android:layout_toRightOf="@+id/textView4"
+        android:layout_toEndOf="@+id/textView4"
+        android:layout_alignBaseline="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gateway:"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:text="172.20.0.1"
+        android:ems="10"
+        android:id="@+id/editTextGateway"
+        android:layout_toRightOf="@+id/textView5"
+        android:layout_toEndOf="@+id/textView5"
+        android:layout_alignBaseline="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NetMask:"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:text="255.255.0.0"
+        android:ems="10"
+        android:id="@+id/editTextNetMask"
+        android:layout_toRightOf="@+id/textView6"
+        android:layout_toEndOf="@+id/textView6"
+        android:layout_alignBaseline="@+id/textView6" />
+
+    <TextView
+    android:id="@+id/textView7"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="DNS1:"
+    android:layout_marginTop="11dp"
+    android:layout_below="@+id/textView6"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:text="172.20.0.1"
+        android:ems="10"
+        android:id="@+id/editTextDNS1"
+        android:layout_toRightOf="@+id/textView7"
+        android:layout_toEndOf="@+id/textView7"
+        android:layout_alignBaseline="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView71"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DNS2:"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/textView7"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:text="172.20.0.1"
+        android:ems="10"
+        android:id="@+id/editTextDNS2"
+        android:layout_toRightOf="@+id/textView71"
+        android:layout_toEndOf="@+id/textView71"
+        android:layout_alignBaseline="@+id/textView71" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView71"
+        android:text="Ethernet proxy settings:"
+        android:layout_marginTop="20dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupEthernetProxySettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView8"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="15dp" >
+
+        <RadioButton
+            android:id="@+id/radioEthernetProxySettingsDoNothing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Do Nothing" />
+
+        <RadioButton
+            android:id="@+id/radioEthernetProxySettingsDisable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Disable" />
+
+        <RadioButton
+            android:id="@+id/radioEthernetProxySettingsManual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manual" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ProxyHostName:"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/radioGroupEthernetProxySettings"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:text="10.82.80.208"
+        android:ems="10"
+        android:id="@+id/editTextProxyHostName"
+        android:layout_toRightOf="@+id/textView9"
+        android:layout_toEndOf="@+id/textView9"
+        android:layout_alignBaseline="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ProxyPort:"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/textView9"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="8888"
+        android:ems="10"
+        android:id="@+id/editTextProxyPort"
+        android:layout_toRightOf="@+id/textView10"
+        android:layout_toEndOf="@+id/textView10"
+        android:layout_alignBaseline="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BypassProxy:"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/textView10"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:text="*.google.fr,*.google.com"
+        android:ems="10"
+        android:id="@+id/editTextBypassProxy"
+        android:layout_toRightOf="@+id/textView11"
+        android:layout_toEndOf="@+id/textView11"
+        android:layout_alignBaseline="@+id/textView11" />
+
+    <Button
+        android:id="@+id/buttonSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set"
+        android:layout_below="@+id/textView11"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status:"
+        android:layout_below="@+id/buttonSet"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textViewStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_below="@+id/textView2" />
+</RelativeLayout>
+</ScrollView>
