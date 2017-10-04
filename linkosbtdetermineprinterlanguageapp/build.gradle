@@ -1,14 +1,19 @@
+// To change build type from library to application
+// 1- comment the line: apply plugin: 'com.android.library'
+// 2- uncomment the line: apply plugin: 'com.android.application'
+// 3- uncomment the line: //applicationId "com.zebra.xxxxxxxx"
+// 4- uncomment the application and activity declaration in AndroidManifest.xml
 apply plugin: 'com.android.library'
 //apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    compileSdkVersion versions.compile_sdk
+    buildToolsVersion versions.build_tools
 
     defaultConfig {
         //applicationId "com.zebra.determineprinterlanguage"
-        minSdkVersion 16
-        targetSdkVersion 26
+        minSdkVersion versions.min_sdk
+        targetSdkVersion versions.target_sdk
         versionCode 1
         versionName "1.0"
     }
@@ -36,7 +41,7 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:design:26.+'
+    compile libraries.design_support
     provided files('../libs/commons-io-2.2.jar')
     provided files('../libs/commons-net-3.1.jar')
     provided files('../libs/commons-validator-1.4.0.jar')

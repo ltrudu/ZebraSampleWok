@@ -1,13 +1,19 @@
+// To change build type from library to application
+// 1- comment the line: apply plugin: 'com.android.library'
+// 2- uncomment the line: apply plugin: 'com.android.application'
+// 3- uncomment the line: //applicationId "com.zebra.xxxxxxxx"
+// 4- uncomment the application and activity declaration in AndroidManifest.xml
 apply plugin: 'com.android.library'
+//apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 'Zebra Technologies Corp:EMDK APIs:23'
-    buildToolsVersion "26.0.1"
+    compileSdkVersion versions.compile_emdk
+    buildToolsVersion versions.build_tools
 
     defaultConfig {
         //applicationId "com.symbol.scanandpairsample1"
-        minSdkVersion 19
-        targetSdkVersion 26
+        minSdkVersion versions.min_sdk
+        targetSdkVersion versions.target_sdk
         versionCode 8
         versionName "6.6.0"
     }

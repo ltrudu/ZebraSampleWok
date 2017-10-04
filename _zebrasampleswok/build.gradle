@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    compileSdkVersion versions.compile_sdk
+    buildToolsVersion versions.build_tools
     defaultConfig {
         applicationId "com.symbol.emdkallsamples"
-        minSdkVersion 19
-        targetSdkVersion 26
+        minSdkVersion versions.min_sdk
+        targetSdkVersion versions.target_sdk
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -25,16 +25,15 @@ android {
 }
 
 dependencies {
-
     //noinspection AndroidLintGradleCompatible
-    compile 'com.android.support:multidex:1.0.1'
+    compile libraries.multidex
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:26.+'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.android.support:design:26.+'
+    compile libraries.appcompat_v7
+    compile libraries.constraint_layout
+    compile libraries.design_support
     testCompile 'junit:junit:4.12'
     compile project(':barcodesampleapp')
     compile project(':notificationsampleapp')

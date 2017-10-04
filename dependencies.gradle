@@ -1,0 +1,22 @@
+ext.versions = [
+        compile_sdk   : 23,
+        compile_emdk  : "Zebra Technologies Corp:EMDK APIs:23",
+        min_sdk       : 19,
+        target_sdk    : 23,
+        build_tools   : "26.0.1",
+        support_lib   : "23.+",
+        zxing_android : "2.3.0",
+        multidex      : "1.0.1",
+        c_layout      : "1.0.2",
+        qrgen         : "2.3.0"
+]
+
+ext.libraries = [
+        multidex            : "com.android.support:multidex:$versions.multidex",
+        appcompat_v7        : "com.android.support:appcompat-v7:$versions.support_lib",
+        design_support      : "com.android.support:design:$versions.support_lib",
+        constraint_layout   : "com.android.support.constraint:constraint-layout:$versions.c_layout",
+        zxing_android       : "com.journeyapps:zxing-android-embedded:$versions.zxing_android",
+        mediarouter_v7      : "com.android.support:mediarouter-v7:$versions.support_lib",
+        qrgen               : "com.github.kenglxn.QRGen:android:$versions.qrgen"
+]

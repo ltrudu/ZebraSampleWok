@@ -1,14 +1,19 @@
+// To change build type from library to application
+// 1- comment the line: apply plugin: 'com.android.library'
+// 2- uncomment the line: apply plugin: 'com.android.application'
+// 3- uncomment the line: //applicationId "com.zebra.xxxxxxxx"
+// 4- uncomment the application and activity declaration in AndroidManifest.xml
 apply plugin: 'com.android.library'
 //apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    compileSdkVersion versions.compile_sdk
+    buildToolsVersion versions.build_tools
 
     defaultConfig {
         //applicationId "com.zebra.kdu"
-        minSdkVersion 16
-        targetSdkVersion 26
+        minSdkVersion versions.min_sdk
+        targetSdkVersion versions.target_sdk
     }
 
     buildTypes {
@@ -34,8 +39,8 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:26.+'
-    compile 'com.journeyapps:zxing-android-embedded:2.3.0'
+    compile libraries.appcompat_v7
+    compile libraries.zxing_android
     provided files('../libs/commons-io-2.2.jar')
     provided files('../libs/commons-lang3-3.4.jar')
     provided files('../libs/commons-net-3.1.jar')
