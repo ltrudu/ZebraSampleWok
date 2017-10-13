@@ -11,10 +11,14 @@ public enum eAPIEnums {
     SIMULSCAN(2),
     DATAWEDGE(3),
     ANDROID(4),
-    MX(5);
+    MX(5),
+    ENTERPRISE(6),
+    LINKOS(7),
+    BT(7),
+    BTLE(8);
 
     private int _value;
-    private static String[] mAPIs = new String[]{"EMDK", "ProfileManager", "Simulscan", "DataWedge", "Android", "MX"};
+    private static String[] mAPIs = new String[]{ "NONE", "EMDK", "ProfileManager", "Simulscan", "DataWedge", "Android", "MX", "ENTERPRISE", "LinkOS", "BT", "BTLE"};
 
     eAPIEnums(int Value) {
         this._value = Value;
@@ -25,7 +29,7 @@ public enum eAPIEnums {
     }
 
     public String getName(){
-        return mAPIs[_value];
+        return mAPIs[_value + 1];
     }
 
     public static eAPIEnums fromInt(int i) {

@@ -28,7 +28,6 @@ public class SampleItems {
     public void initSampleItems()
     {
         mItems = new ArrayList<>();
-
         addItem("Barcode Sample",                   com.symbol.barcodesample1.MainActivity.class,               new eAPIEnums[]{EMDK},                                null);
         addItem("Notification Sample",              com.symbol.notificationsample1.MainActivity.class,          new eAPIEnums[]{EMDK},                                null);
         addItem("Profile Application Mgr",          com.symbol.profileappmgrsample1.MainActivity.class,         new eAPIEnums[]{PROFILEMANAGER},                      null);
@@ -52,8 +51,6 @@ public class SampleItems {
         addItem("Serial Communications",            com.symbol.serialcommsample1.MainActivity.class,            new eAPIEnums[]{EMDK},                                null);
         addItem("UDI",                              com.symbol.udisample1.MainActivity.class,                   new eAPIEnums[]{EMDK},                                null);
         addItem("Personnal Shopper",                com.symbol.personalshoppersample1.MainActivity.class,       new eAPIEnums[]{EMDK},                                null);
-
-
     }
 
     private void addItem(String title, Class<?> assclass, eAPIEnums[] api, int[] usecases)
