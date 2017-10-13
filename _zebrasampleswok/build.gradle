@@ -34,6 +34,7 @@ dependencies {
     compile libraries.appcompat_v7
     compile libraries.constraint_layout
     compile libraries.design_support
+    compile files(libfiles.coollection)
     testCompile 'junit:junit:4.12'
     compile project(':barcodesampleapp')
     compile project(':notificationsampleapp')

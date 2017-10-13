@@ -1,6 +1,10 @@
 <resources>
-    <string name="app_name">ZebraSamples</string>
-    <string name="title_activity_ordered_sample_list">OrderedSampleListActivity</string>
+    <string name="app_name">ZSamplesWok</string>
+
+    <string name="title_activity_main">Zebra\'s DNA Samples Wok</string>
+    <string name="title_activity_selectsample">Select a Sample</string>
+    <string name="title_activity_usecase">Select a Use Case</string>
+    <string name="title_activity_api">Select an API</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

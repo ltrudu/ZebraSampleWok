@@ -10,10 +10,10 @@
 
 
     <include
-        layout="@layout/app_bar_ordered_sample_list"
+        android:id="@+id/appbar_include"
+        layout="@layout/app_bar_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone" />
+        android:layout_height="wrap_content" />
 
     <RelativeLayout
         android:id="@+id/rl_introlayout"
@@ -36,21 +36,15 @@
             android:textSize="24sp" />
     </RelativeLayout>
 
-    <ListView
-        android:id="@+id/lv_selectedsamplelist"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp" />
-
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_ordered_sample_list"
-        app:menu="@menu/activity_ordered_sample_list_drawer" />
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_samplebrowser_drawer" >
 
+    </android.support.design.widget.NavigationView>
 
 </android.support.v4.widget.DrawerLayout>

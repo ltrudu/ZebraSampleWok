@@ -3,14 +3,16 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_api"
-            android:title="By API" />
-        <item
             android:id="@+id/nav_usecase"
-            android:title="By Use-Case" />
+            android:title="By Use-Cases" />
+
+        <item
+            android:id="@+id/nav_api"
+            android:title="By APIs" />
+
         <item
             android:id="@+id/nav_alphabetical"
-            android:title="Alphabetical" />
+            android:title="All Samples" />
     </group>
 
 </menu>

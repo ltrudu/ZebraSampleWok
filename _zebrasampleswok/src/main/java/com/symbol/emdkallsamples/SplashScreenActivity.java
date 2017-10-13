@@ -43,7 +43,7 @@ public class SplashScreenActivity extends AppCompatActivity {
 
     private static long WAIT_MILLISECONDS = 700;
 
-    private Class<?> mStartupClass = SampleListActivity.class; //OrderedSampleListActivity.class
+    private Class<?> mStartupClass = SampleBrowserActivity.class; //SampleListActivity.class;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
