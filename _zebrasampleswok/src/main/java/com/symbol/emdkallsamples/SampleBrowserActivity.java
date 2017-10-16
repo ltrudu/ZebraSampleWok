@@ -8,6 +8,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
@@ -77,15 +78,12 @@ public class SampleBrowserActivity extends AppCompatActivity
     }
 
     @Override
-    protected void onPause() {
-        mViewAnimator.removeAllViews();
-        mViewAnimator.destroyDrawingCache();
-        super.onPause();
-    }
-
-    @Override
     protected void onResume() {
         super.onResume();
+        // We are coming back from a sample
+        // Do nothing
+        if(mNavigationLevel > 0)
+            return;
         setupDetailView();
     }
 
@@ -115,6 +113,7 @@ public class SampleBrowserActivity extends AppCompatActivity
                 if(mNavigationLevel == -1)
                 {
                     mNavigationState = eNavigationState.NONE;
+                    drawer.openDrawer(Gravity.LEFT);
                     setupDetailView();
                 }
                 updateTitle();
@@ -139,6 +138,7 @@ public class SampleBrowserActivity extends AppCompatActivity
         }
         else
         {
+            // Disable animations to force fast refresh with new list
             mViewAnimator.setInAnimation(mAlphaIn);
             mViewAnimator.setOutAnimation(mAlphaOut);
         }
