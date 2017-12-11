@@ -3,7 +3,7 @@ ext.versions = [
         compile_emdk  : "Zebra Technologies Corp:EMDK APIs:23",
         min_sdk       : 19,
         target_sdk    : 23,
-        build_tools   : "26.0.1",
+        build_tools   : "26.0.2",
         support_lib   : "23.+",
         zxing_android : "2.3.0",
         multidex      : "1.0.1",

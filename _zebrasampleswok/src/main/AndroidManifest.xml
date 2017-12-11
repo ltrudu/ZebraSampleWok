@@ -350,7 +350,7 @@
         <activity
             android:name="com.zebra.android.devdemo.discovery.BluetoothLeDiscovery"
             android:configChanges="keyboardHidden|orientation"
-            android:label="@string/discovered_printers"
+            android:label="@string/activity_name_bluetoothlediscovery"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
 

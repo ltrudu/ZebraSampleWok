@@ -1,15 +1,18 @@
 package com.symbol.emdkallsamples;
 
 import android.Manifest;
-import android.app.Activity;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Handler;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -19,6 +22,8 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
+
+import com.zebra.kdu.SplashScreen;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
@@ -43,7 +48,7 @@ public class SplashScreenActivity extends AppCompatActivity {
 
     private static long WAIT_MILLISECONDS = 700;
 
-    private Class<?> mStartupClass = SampleBrowserActivity.class; //SampleListActivity.class;
+    private Class<?> mStartupClass = SampleBrowserActivity.class;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,7 +79,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
-    private void requestLaunchSampleListActivity()
+    private void requestLaunchNextActivity()
     {
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable()
@@ -104,12 +109,15 @@ public class SplashScreenActivity extends AppCompatActivity {
     private void checkPermissions()
     {
         boolean shouldNotRequestPermissions = true;
-        for(String permission : DEMO_PERMISSIONS_LIST)
-        {
-            shouldNotRequestPermissions &= (ContextCompat.checkSelfPermission(this, permission) == PackageManager.PERMISSION_GRANTED);
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP_MR1) {
+            for(String permission : DEMO_PERMISSIONS_LIST)
+            {
+                shouldNotRequestPermissions &= (ContextCompat.checkSelfPermission(this, permission) == PackageManager.PERMISSION_GRANTED);
+            }
         }
+
         if (shouldNotRequestPermissions) {
-            requestLaunchSampleListActivity();
+            requestLaunchNextActivity();
         }
         else
         {
@@ -127,11 +135,38 @@ public class SplashScreenActivity extends AppCompatActivity {
                     allPermissionGranted &= (grantResult == PackageManager.PERMISSION_GRANTED);
                 }
                 if (allPermissionGranted) {
-                    requestLaunchSampleListActivity();
+                    requestLaunchNextActivity();
                 } else {
-                    Toast.makeText(this, "Please grant the necessary permission to launch the application.", Toast.LENGTH_LONG).show();
+                    ShowAlertDialog(SplashScreenActivity.this, "Error", "Please grant the necessary permission to launch the application.");
                 }
                 return;
         }
+    }
+
+    private void ShowAlertDialog(Context context, String title, String message)
+    {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                context);
+
+        // set title
+        alertDialogBuilder.setTitle(title);
+
+        // set dialog message
+        alertDialogBuilder
+                .setMessage(message)
+                .setCancelable(false)
+                .setPositiveButton("OK",new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog,int id) {
+                        // if this button is clicked, close
+                        // current activity
+                        checkPermissions();
+                    }
+                });
+
+        // create alert dialog
+        AlertDialog alertDialog = alertDialogBuilder.create();
+
+        // show it
+        alertDialog.show();
     }
 }
