@@ -30,15 +30,18 @@ public class SampleItem {
     /**
      * Additional informations (optional)
      */
-    // Description of the use-case
-    public String mDescription = null;
+    // Name of the associated html page without extension
+    // ex: mTagID=barcodesampleapp refers to the html page barcodesampleapp.html
+    // in the asset folder
+    public String mTagID;
 
-    // Link on GitHub if a source code is available
-    public String mSourceCodeLink = null;
+    // Indicates if the page stored in the asset folder should be processed
+    // if yes, indicates the processing level
+    // see CustomWebViewClient for more information
+    public int mProcessLevel = CustomWebViewClient.PROCESS_LEVEL_NONE;
 
-    // Documentation links Pair<Description/title, URL>
-    public String mDocumentationLink = null;
-
-    // Resources
-    public String mResources = null;
+    // URL of the sample description and informations
+    // Refers to a page inside the asset folder
+    // if it is available
+    public String mHTMLDescriptionURL = null;
 }

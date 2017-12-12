@@ -73,7 +73,7 @@ public class SampleBrowserActivity extends AppCompatActivity
         mIntroText = (TextView)findViewById(R.id.tv_introtext);
         mIntroRelativeLayout = (RelativeLayout)findViewById(R.id.rl_introlayout);
 
-        mSamplesDescription = new SamplesDescription();
+        mSamplesDescription = new SamplesDescription(this);
         setupDetailView();
     }
 
@@ -257,8 +257,7 @@ public class SampleBrowserActivity extends AppCompatActivity
                 mViewAnimator.removeAllViews();
                 mViewAnimator.destroyDrawingCache();
 
-                ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
-                        android.R.layout.simple_list_item_1, mSamplesDescription.mSampleTitlesAlphabetically);
+                SBSampleItemsArrayAdapter adapter = new SBSampleItemsArrayAdapter(this, R.layout.samplebrowser_listview_item_row, mSamplesDescription.mSampleItemsAlphabetically);
 
                 mNavigationLevel = 0;
 
@@ -272,7 +271,6 @@ public class SampleBrowserActivity extends AppCompatActivity
                         startActivity(intent);
                     }
                 });
-
                 mViewAnimator.addView(sampleListView);
                 break;
             }
@@ -295,18 +293,19 @@ public class SampleBrowserActivity extends AppCompatActivity
                     public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                         // One api has been selected let's push a list of associated samples to the view animator
                         String apiTitle = mSamplesDescription.mAPIsList.get(position);
-                        final List<String> sampleList = mSamplesDescription.mByAPI.get(apiTitle);
-                        ArrayAdapter<String> samplesadapter = new ArrayAdapter<String>(SampleBrowserActivity.this,
-                                android.R.layout.simple_list_item_1, sampleList);
+
+                        final List<SampleItem> sampleList = mSamplesDescription.mSampleItemsByAPI.get(apiTitle);
+                        SBSampleItemsArrayAdapter adapter = new SBSampleItemsArrayAdapter(SampleBrowserActivity.this, R.layout.samplebrowser_listview_item_row, sampleList);
 
                         mNavigationLevel = 1;
+
                         ListView samplesListView = new ListView(SampleBrowserActivity.this);
-                        samplesListView.setAdapter(samplesadapter);
+                        samplesListView.setAdapter(adapter);
                         samplesListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                             @Override
                             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                                String sampleTitle = sampleList.get(position);
-                                Intent intent = new Intent(SampleBrowserActivity.this, mSamplesDescription.getClass(sampleTitle));
+                                SampleItem sampleitem = sampleList.get(position);
+                                Intent intent = new Intent(SampleBrowserActivity.this, sampleitem.mClass);
                                 startActivity(intent);
                             }
                         });
@@ -337,21 +336,20 @@ public class SampleBrowserActivity extends AppCompatActivity
                     public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                         // One api has been selected let's push a list of associated samples to the view animator
                         String usecaseTitle = mSamplesDescription.mUseCasesList.get(position);
-                        List<String> useCaseList = mSamplesDescription.mByUseCases.get(usecaseTitle);
 
-                        ArrayAdapter<String> samplesadapter = new ArrayAdapter<String>(SampleBrowserActivity.this,
-                                android.R.layout.simple_list_item_1, useCaseList);
+                        final List<SampleItem> useCaseList = mSamplesDescription.mSampleItemsByUseCases.get(usecaseTitle);
+                        SBSampleItemsArrayAdapter adapter = new SBSampleItemsArrayAdapter(SampleBrowserActivity.this, R.layout.samplebrowser_listview_item_row, useCaseList);
 
                         mNavigationLevel = 1;
                         ListView useCaseSamplesListView = new ListView(SampleBrowserActivity.this);
-                        useCaseSamplesListView.setAdapter(samplesadapter);
-                        samplesadapter.notifyDataSetChanged();
-                        final List<String> fUseCaseList = useCaseList;
+                        useCaseSamplesListView.setAdapter(adapter);
+                        adapter.notifyDataSetChanged();
+
                         useCaseSamplesListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                             @Override
                             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                                String sampleTitle = fUseCaseList.get(position);
-                                Intent intent = new Intent(SampleBrowserActivity.this, mSamplesDescription.getClass(sampleTitle));
+                                SampleItem sampleitem = useCaseList.get(position);
+                                Intent intent = new Intent(SampleBrowserActivity.this, sampleitem.mClass);
                                 startActivity(intent);
                             }
                         });

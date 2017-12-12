@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.symbol.emdkallsamples">
 
@@ -24,17 +23,18 @@
     <uses-permission android:name="android.permission.FLASHLIGHT" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
-    <uses-feature android:name="android.hardware.camera"
-        android:required="false"/>
-
-    <uses-feature android:name="android.hardware.camera.autofocus"
-        android:required="false"/>
-
-    <uses-feature android:name="android.hardware.nfc"
+    <uses-feature
+        android:name="android.hardware.camera"
         android:required="false" />
-
-    <uses-feature android:name="android.hardware.usb.host"
-        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.usb.host"
+        android:required="false" />
 
     <application
         android:allowBackup="true"
@@ -60,72 +60,70 @@
             android:name=".SampleListActivity"
             android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme">
-        </activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".SampleBrowserActivity"
             android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.symbol.barcodesample1.MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:label="@string/activity_name_barcodesample1"
             android:screenOrientation="portrait"
-            android:theme="@style/SamplesTheme"></activity>
+            android:theme="@style/SamplesTheme" />
         <activity
             android:name="com.symbol.notificationsample1.MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:label="@string/activity_name_notificationsample1"
             android:screenOrientation="portrait"
-            android:theme="@style/SamplesTheme"></activity>
+            android:theme="@style/SamplesTheme" />
         <activity
             android:name="com.symbol.profileappmgrsample1.MainActivity"
             android:label="@string/activity_name_profileappmgrsample1"
             android:screenOrientation="portrait"
-            android:theme="@style/SamplesTheme"></activity>
+            android:theme="@style/SamplesTheme" />
         <activity
             android:name="com.symbol.profileclocksample1.MainActivity"
             android:label="@string/activity_name_profileclocksample1"
             android:screenOrientation="portrait"
-            android:theme="@style/SamplesTheme"></activity>
+            android:theme="@style/SamplesTheme" />
         <activity
             android:name="com.symbol.profiledatacapturesample1.MainActivity"
             android:label="@string/activity_name_profiledatacapturesample1"
             android:screenOrientation="portrait"
             android:theme="@style/SamplesTheme"
-            android:windowSoftInputMode="adjustPan"></activity>
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name="com.symbol.profilegprsmgrsample1.MainActivity"
             android:label="@string/activity_name_profilegprsmgrsample1"
             android:screenOrientation="portrait"
-            android:theme="@style/SamplesTheme"></activity>
+            android:theme="@style/SamplesTheme" />
         <activity
             android:name="com.symbol.profilepowermgrsample1.MainActivity"
             android:label="@string/activity_name_profilepowermgrsample1"
             android:screenOrientation="portrait"
-            android:theme="@style/SamplesTheme"></activity>
+            android:theme="@style/SamplesTheme" />
         <activity
             android:name="com.symbol.profilewifisample1.MainActivity"
             android:label="@string/activity_name_profilewifisample1"
             android:screenOrientation="portrait"
-            android:theme="@style/SamplesTheme"></activity>
+            android:theme="@style/SamplesTheme" />
         <activity
             android:name="com.symbol.profilewirelessmgrsample1.MainActivity"
             android:label="@string/activity_name_profilewirelessmgrsample1"
             android:screenOrientation="portrait"
-            android:theme="@style/SamplesTheme"></activity>
+            android:theme="@style/SamplesTheme" />
         <activity
             android:name="com.symbol.personalshoppersample1.MainActivity"
             android:label="@string/activity_name_personalshoppersample1"
             android:screenOrientation="portrait"
-            android:theme="@style/SamplesTheme"></activity>
+            android:theme="@style/SamplesTheme" />
         <activity
             android:name="com.symbol.scanandpairsample1.MainActivity"
             android:label="@string/activity_name_scanandpairsample1"
             android:screenOrientation="portrait"
-            android:theme="@style/SamplesTheme"></activity>
+            android:theme="@style/SamplesTheme" />
         <activity
             android:name="com.symbol.securenfcsample1.MainActivity"
             android:label="@string/activity_name_securenfcsample1"
@@ -149,46 +147,46 @@
             android:name="com.symbol.serialcommsample1.MainActivity"
             android:label="@string/activity_name_serialcommsample1"
             android:screenOrientation="portrait"
-            android:theme="@style/SamplesTheme"></activity>
+            android:theme="@style/SamplesTheme" />
         <activity
             android:name="com.symbol.emdk.simulscansample1.MainActivity"
             android:label="@string/activity_name_simulscansample1"
             android:screenOrientation="portrait"
-            android:theme="@style/SamplesTheme"></activity>
+            android:theme="@style/SamplesTheme" />
         <activity
             android:name="com.symbol.emdk.simulscansample1.ResultsActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/SamplesTheme"></activity>
+            android:theme="@style/SamplesTheme" />
         <activity
             android:name="com.symbol.udisample1.MainActivity"
             android:label="@string/activity_name_udisample1"
             android:screenOrientation="portrait"
-            android:theme="@style/SamplesTheme"></activity>
+            android:theme="@style/SamplesTheme" />
         <activity
             android:name="com.symbol.batteryinfosample.MainActivity"
             android:label="@string/activity_name_batteryinfosample"
             android:screenOrientation="portrait"
-            android:theme="@style/SamplesCompatTheme"></activity>
+            android:theme="@style/SamplesCompatTheme" />
         <activity
             android:name="com.symbol.cellulardataenabledisable.MainActivity"
             android:label="@string/activity_name_cellulardataenabledisable"
             android:screenOrientation="portrait"
-            android:theme="@style/SamplesTheme"></activity>
+            android:theme="@style/SamplesTheme" />
         <activity
             android:name="com.symbol.componentmanagersample.MainActivity"
             android:label="@string/activity_name_componentmanagersample"
             android:screenOrientation="portrait"
-            android:theme="@style/SamplesTheme"></activity>
+            android:theme="@style/SamplesTheme" />
         <activity
             android:name="com.symbol.ethernetmanagersample.MainActivity"
             android:label="@string/activity_name_ethernetmanagersample"
             android:screenOrientation="portrait"
-            android:theme="@style/SamplesTheme"></activity>
+            android:theme="@style/SamplesTheme" />
         <activity
             android:name="com.symbol.lockpinenabler.MainActivity"
             android:label="@string/activity_name_lockpinenabler"
             android:screenOrientation="portrait"
-            android:theme="@style/SamplesCompatTheme"></activity>
+            android:theme="@style/SamplesCompatTheme" />
 
         <receiver
             android:name="com.symbol.lockpinenabler.DevAdminTestReceiver"
@@ -206,7 +204,7 @@
             android:name="com.symbol.terminalinfo.MainActivity"
             android:label="@string/activity_name_terminalinfo"
             android:screenOrientation="portrait"
-            android:theme="@style/SamplesCompatTheme"></activity>
+            android:theme="@style/SamplesCompatTheme" />
         <activity android:name="com.symbol.basickiosk.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -227,7 +225,8 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name="com.symbol.datacapturereceiver.MainActivity"
+        <activity
+            android:name="com.symbol.datacapturereceiver.MainActivity"
             android:label="@string/activity_name_datacapturereceiver">
             <intent-filter>
                 <action android:name="com.symbol.datacapturereceiver.RECVR" />
@@ -236,48 +235,37 @@
             </intent-filter>
         </activity>
 
-        <!-- Link OS Android Bluetooth Samples-->
+        <!-- Link OS Android Bluetooth Samples -->
         <activity
             android:name="com.zebra.connectivitydemo.MainActivity"
             android:label="@string/activity_name_connectivitydemo"
-            android:screenOrientation="portrait">
-        </activity>
-
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.zebra.defaultprinterdemo.MainActivity"
             android:label="@string/activity_name_defaultprinterdemo"
-            android:screenOrientation="portrait">
-        </activity>
-
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.zebra.determineprinterlanguage.MainActivity"
             android:label="@string/activity_name_determineprinterlanguage"
-            android:screenOrientation="portrait">
-        </activity>
-
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.zebra.listformatsdemo.MainActivity"
             android:label="@string/activity_name_listformatsdemo"
-            android:screenOrientation="portrait">
-        </activity>
-
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.zebra.listformatsdemo.ListFormatsScreen"
             android:configChanges="keyboardHidden|orientation"
-            android:theme="@style/ListFormatsActivityTheme"
             android:screenOrientation="portrait"
+            android:theme="@style/ListFormatsActivityTheme"
             android:windowSoftInputMode="adjustPan" />
-
-        <activity android:name="com.zebra.pdfprint.MainActivity"
+        <activity
+            android:name="com.zebra.pdfprint.MainActivity"
             android:label="@string/activity_name_pdfprint"
-            android:screenOrientation="portrait">
-        </activity>
-
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.zebra.printrotatedimage.MainActivity"
             android:label="@string/activity_name_printrotatedimage"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait" />
 
         <!-- PrintStation BEGIN -->
 
@@ -285,30 +273,34 @@
             android:name="com.zebra.kdu.SplashScreen"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/app_name"
-            android:theme= "@style/SplashStyle" >
-        </activity>
-
-        <activity android:name="com.zebra.kdu.ChooseFormatScreen"
+            android:theme="@style/SplashStyle" />
+        <activity
+            android:name="com.zebra.kdu.ChooseFormatScreen"
             android:configChanges="keyboardHidden|orientation"
-            android:launchMode="singleTask" >
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.nfc.action.NDEF_DISCOVERED" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <data android:scheme="http"
-                    android:host="zebra.com"
-                    android:path="/apps/r/nfc" />
-                <data android:scheme="http"
-                    android:host="www.zebra.com"
-                    android:path="/apps/r/nfc" />
-            </intent-filter>
 
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="zebra.com"
+                    android:path="/apps/r/nfc"
+                    android:scheme="http" />
+                <data
+                    android:host="www.zebra.com"
+                    android:path="/apps/r/nfc"
+                    android:scheme="http" />
+            </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data
                     android:host="zebra.com"
                     android:pathPrefix="/apps/r/nfc"
@@ -325,26 +317,23 @@
         </activity>
         <activity
             android:name="com.zebra.kdu.VariablesScreen"
-            android:configChanges="keyboardHidden|orientation" >
-        </activity>
+            android:configChanges="keyboardHidden|orientation" />
         <activity
             android:name="com.google.zxing.client.android.CaptureActivity"
             android:clearTaskOnLaunch="true"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="landscape"
-            tools:replace="android:screenOrientation,android:theme"
             android:stateNotNeeded="true"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-
+            android:windowSoftInputMode="stateAlwaysHidden"
+            tools:replace="android:screenOrientation,android:theme" />
 
         <!-- PrintStation END -->
 
         <activity
             android:name="com.zebra.sendfiledemo.MainActivity"
             android:label="@string/activity_name_sendfiledemo"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait" />
 
         <!-- LinkOS BT LE Combined Demos BEGIN -->
         <activity
@@ -353,102 +342,87 @@
             android:label="@string/activity_name_bluetoothlediscovery"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name="com.zebra.android.devdemo.imageprint.ImagePrintDemo"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/activity_name_imageprintdemo"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name="com.zebra.android.devdemo.status.PrintStatusDemo"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/activity_name_printstatusdemo"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name="com.zebra.android.devdemo.sendfile.SendFileDemo"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/activity_name_btlesendfiledemo"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name="com.zebra.android.devdemo.storedformat.StoredFormatScreen"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/activity_name_storedformatscreen"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name="com.zebra.android.devdemo.storedformat.StoredFormatDemo"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name="com.zebra.android.devdemo.storedformat.VariablesScreen"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name="com.zebra.android.devdemo.connectivity.ConnectivityDemo"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/activity_name_btleconnectivitydemo"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name="com.zebra.android.devdemo.status.PrinterStatusScreen"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/activity_name_printerstatusscreen"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name="com.zebra.android.devdemo.listformats.ListFormatsScreen"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/activity_name_listformatsscreen"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name="com.zebra.android.devdemo.listformats.ListFormatsDemo"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name="com.zebra.android.devdemo.statuschannel.StatusChannelDemo"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/activity_name_statuschanneldemo"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name="com.zebra.android.devdemo.statuschannel.StatusChannelScreen"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/activity_name_statuschannelscreen"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name="com.zebra.android.devdemo.multichannel.MultiChannelDemo"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/activity_name_multichanneldemo"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name="com.zebra.android.devdemo.multichannel.MultiChannelScreen"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/activity_name_multichannelscreen"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name="com.zebra.android.devdemo.receipt.ReceiptDemo"
             android:configChanges="keyboardHidden|orientation"
@@ -458,6 +432,7 @@
 
         <!-- LinkOS BT LE Combined Demos END -->
 
+        <activity android:name=".InfoViewer" />
     </application>
 
 </manifest>

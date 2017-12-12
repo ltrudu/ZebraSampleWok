@@ -1,7 +1,7 @@
 ext.versions = [
         compile_sdk   : 23,
         compile_emdk  : "Zebra Technologies Corp:EMDK APIs:23",
-        min_sdk       : 19,
+        min_sdk       : 21,
         target_sdk    : 23,
         build_tools   : "26.0.2",
         support_lib   : "23.+",
