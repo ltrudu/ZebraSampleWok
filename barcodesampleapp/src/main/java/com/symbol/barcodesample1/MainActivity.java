@@ -9,9 +9,9 @@ import java.util.Iterator;
 import java.util.List;
 
 import com.symbol.emdk.EMDKManager;
-import com.symbol.emdk.EMDKResults;
 import com.symbol.emdk.EMDKManager.EMDKListener;
 import com.symbol.emdk.EMDKManager.FEATURE_TYPE;
+import com.symbol.emdk.EMDKResults;
 import com.symbol.emdk.barcode.BarcodeManager;
 import com.symbol.emdk.barcode.BarcodeManager.ConnectionState;
 import com.symbol.emdk.barcode.BarcodeManager.ScannerConnectionListener;
@@ -90,6 +90,12 @@ public class MainActivity extends Activity implements EMDKListener, DataListener
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
         setDefaultOrientation();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
 
         textViewData = (TextView)findViewById(R.id.textViewData);
         textViewStatus = (TextView)findViewById(R.id.textViewStatus);
@@ -101,13 +107,13 @@ public class MainActivity extends Activity implements EMDKListener, DataListener
         spinnerScannerDevices = (Spinner)findViewById(R.id.spinnerScannerDevices);
         spinnerTriggers = (Spinner)findViewById(R.id.spinnerTriggers);
 
-		
-		EMDKResults results = EMDKManager.getEMDKManager(getApplicationContext(), this);
-		if (results.statusCode != EMDKResults.STATUS_CODE.SUCCESS) {
-			textViewStatus.setText("Status: " + "EMDKManager object request failed!");
-			return;
-		}
-		
+
+        EMDKResults results = EMDKManager.getEMDKManager(getApplicationContext(), this);
+        if (results.statusCode != EMDKResults.STATUS_CODE.SUCCESS) {
+            textViewStatus.setText("Status: " + "EMDKManager object request failed!");
+            return;
+        }
+
         checkBoxEAN8.setOnCheckedChangeListener(this);
         checkBoxEAN13.setOnCheckedChangeListener(this);
         checkBoxCode39.setOnCheckedChangeListener(this);
@@ -122,9 +128,8 @@ public class MainActivity extends Activity implements EMDKListener, DataListener
 
         textViewData.setSelected(true);
         textViewData.setMovementMethod(new ScrollingMovementMethod());
-		
-    }
 
+    }
 
     private void setDefaultOrientation(){
 

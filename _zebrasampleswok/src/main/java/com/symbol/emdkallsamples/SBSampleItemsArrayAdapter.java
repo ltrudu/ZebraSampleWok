@@ -59,12 +59,13 @@ public class SBSampleItemsArrayAdapter extends ArrayAdapter<SampleItem> {
         }
 
         SampleItem item = mData.get(position);
+        final SampleItem fItem = item;
 
         holder.txtTitle.setText(item.mTitle);
         if(item.mHTMLDescriptionURL != null && !item.mHTMLDescriptionURL.isEmpty())
         {
             holder.infoButton.setVisibility(View.VISIBLE);
-            final SampleItem fItem = item;
+
             holder.infoButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -79,7 +80,21 @@ public class SBSampleItemsArrayAdapter extends ArrayAdapter<SampleItem> {
         {
             holder.infoButton.setVisibility(View.GONE);
         }
+
+        rowView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startSampleActivity(fItem);
+            }
+        });
+
         return rowView;
+    }
+
+    private void startSampleActivity(SampleItem item)
+    {
+        Intent intent = new Intent(mContext,item.mClass);
+        mContext.startActivity(intent);
     }
 
     private void startInfoViewerActivity(SampleItem item)
