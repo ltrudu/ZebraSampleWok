@@ -3,13 +3,15 @@ ext.versions = [
         compile_emdk  : "Zebra Technologies Corp:EMDK APIs:23",
         min_sdk       : 21,
         target_sdk    : 23,
-        build_tools   : "26.0.2",
+        build_tools   : "27.0.3",
         support_lib   : "23.+",
         zxing_android : "2.3.0",
         multidex      : "1.0.1",
         c_layout      : "1.0.2",
         qrgen         : "2.3.0",
-        gson          : "2.8.2"
+        gson          : "2.8.2",
+        code          : 1,
+        name          : "1.0.1"
 ]
 
 ext.libraries = [

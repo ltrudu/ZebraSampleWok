@@ -31,5 +31,5 @@ android {
 }
 
 dependencies {
-    compile fileTree(exclude: ['com.symbol.emdk.jar'], dir: 'libs')
+    api fileTree(exclude: ['com.symbol.emdk.jar'], dir: 'libs')
 }

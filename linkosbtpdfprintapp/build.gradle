@@ -29,10 +29,10 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile libraries.appcompat_v7
-    compile libraries.design_support
-    compile libraries.mediarouter_v7
-    provided files('../libs/ZSDK_ANDROID_API.jar')
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    api libraries.appcompat_v7
+    api libraries.design_support
+    api libraries.mediarouter_v7
+    compileOnly files('../libs/ZSDK_ANDROID_API.jar')
 }

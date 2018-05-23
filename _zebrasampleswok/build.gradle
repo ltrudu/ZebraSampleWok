@@ -1,20 +1,20 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion versions.compile_sdk
-    buildToolsVersion versions.build_tools
+    compileSdkVersion versions.compile_emdk
     defaultConfig {
         applicationId "com.symbol.emdkallsamples"
         minSdkVersion versions.min_sdk
         targetSdkVersion versions.target_sdk
-        versionCode 1
-        versionName "1.0"
+        versionCode versions.code
+        versionName versions.name
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
     buildTypes {
         release {
             minifyEnabled false
+            shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
@@ -35,51 +35,52 @@ android {
         exclude 'META-INF/NOTICE'
         exclude 'META-INF/notice.txt'
     }
+    buildToolsVersion '27.0.3'
 }
 
 dependencies {
     //noinspection AndroidLintGradleCompatible
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile libraries.multidex
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    api 'com.android.support.constraint:constraint-layout:1.0.2'
+    api libraries.multidex
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile libraries.appcompat_v7
-    compile libraries.constraint_layout
-    compile libraries.design_support
-    compile files(libfiles.coollection)
-    testCompile 'junit:junit:4.12'
-    compile project(':barcodesampleapp')
-    compile project(':notificationsampleapp')
-    compile project(':profileappmgrapp')
-    compile project(':profileclocksampleapp')
-    compile project(':profiledatacapturesampleapp')
-    compile project(':profilegprssampleapp')
-    compile project(':profilepowermgrsampleapp')
-    compile project(':profilewifisampleapp')
-    compile project(':profilewirelessmgrsampleapp')
-    compile project(':personnalshoppersampleapp')
-    compile project(':scanandpairsampleapp')
-    compile project(':securenfcsampleapp')
-    compile project(':serialcomsampleapp')
-    compile project(':simulscansampleapp')
-    compile project(':udisampleapp')
-    compile project(':batteryinfosampleapp')
-    compile project(':cellularenabledisableapp')
-    compile project(':profilecomponentmgrsampleapp')
-    compile project(':profileethernetmgrsampleapp')
-    compile project(':lockpinenablerapp')
-    compile project(':terminalinfoapp')
-    compile project(':basickiosksampleapp')
-    compile project(':datawedgedatacaptureapp')
-    compile project(':linkosbtsendfileapp')
-    compile project(':linkosbtconnectivitydemoapp')
-    compile project(':linkosbtdefaultprinterdemoapp')
-    compile project(':linkosbtdetermineprinterlanguageapp')
-    compile project(':linkosbtlistformatsdemoapp')
-    compile project(':linkosbtpdfprintapp')
-    compile project(':linkosbtprintrotatedimageapp')
-    compile project(':linkosbtledemoscombinedapp')
-    compile project(':linkosbtprintstationapp')
+    api libraries.appcompat_v7
+    api libraries.constraint_layout
+    api libraries.design_support
+    api files(libfiles.coollection)
+    testImplementation 'junit:junit:4.12'
+    implementation project(':barcodesampleapp')
+    implementation project(':notificationsampleapp')
+    implementation project(':profileappmgrapp')
+    implementation project(':profileclocksampleapp')
+    implementation project(':profiledatacapturesampleapp')
+    implementation project(':profilegprssampleapp')
+    implementation project(':profilepowermgrsampleapp')
+    implementation project(':profilewifisampleapp')
+    implementation project(':profilewirelessmgrsampleapp')
+    implementation project(':personnalshoppersampleapp')
+    implementation project(':scanandpairsampleapp')
+    implementation project(':securenfcsampleapp')
+    implementation project(':serialcomsampleapp')
+    implementation project(':simulscansampleapp')
+    implementation project(':udisampleapp')
+    implementation project(':batteryinfosampleapp')
+    implementation project(':cellularenabledisableapp')
+    implementation project(':profilecomponentmgrsampleapp')
+    implementation project(':profileethernetmgrsampleapp')
+    implementation project(':lockpinenablerapp')
+    implementation project(':terminalinfoapp')
+    implementation project(':basickiosksampleapp')
+    implementation project(':datawedgedatacaptureapp')
+    implementation project(':linkosbtsendfileapp')
+    implementation project(':linkosbtconnectivitydemoapp')
+    implementation project(':linkosbtdefaultprinterdemoapp')
+    implementation project(':linkosbtdetermineprinterlanguageapp')
+    implementation project(':linkosbtlistformatsdemoapp')
+    implementation project(':linkosbtpdfprintapp')
+    implementation project(':linkosbtprintrotatedimageapp')
+    implementation project(':linkosbtledemoscombinedapp')
+    implementation project(':linkosbtprintstationapp')
 }

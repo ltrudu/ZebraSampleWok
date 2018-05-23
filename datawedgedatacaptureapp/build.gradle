@@ -30,7 +30,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile libraries.appcompat_v7
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    api libraries.appcompat_v7
 }

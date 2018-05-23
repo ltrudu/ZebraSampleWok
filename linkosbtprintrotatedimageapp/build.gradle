@@ -41,17 +41,17 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile libraries.design_support
-    provided files('../libs/commons-io-2.2.jar')
-    provided files('../libs/commons-net-3.1.jar')
-    provided files('../libs/commons-validator-1.4.0.jar')
-    provided files('../libs/httpcore-4.3.1.jar')
-    provided files('../libs/httpmime-4.3.2.jar')
-    provided files('../libs/jackson-annotations-2.2.3.jar')
-    provided files('../libs/jackson-core-2.2.3.jar')
-    provided files('../libs/jackson-databind-2.2.3.jar')
-    provided files('../libs/opencsv-2.2.jar')
-    provided files('../libs/snmp6_1.jar')
-    provided files('../libs/ZSDK_ANDROID_API.jar')
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api libraries.design_support
+    compileOnly files('../libs/commons-io-2.2.jar')
+    compileOnly files('../libs/commons-net-3.1.jar')
+    compileOnly files('../libs/commons-validator-1.4.0.jar')
+    compileOnly files('../libs/httpcore-4.3.1.jar')
+    compileOnly files('../libs/httpmime-4.3.2.jar')
+    compileOnly files('../libs/jackson-annotations-2.2.3.jar')
+    compileOnly files('../libs/jackson-core-2.2.3.jar')
+    compileOnly files('../libs/jackson-databind-2.2.3.jar')
+    compileOnly files('../libs/opencsv-2.2.jar')
+    compileOnly files('../libs/snmp6_1.jar')
+    compileOnly files('../libs/ZSDK_ANDROID_API.jar')
 }
